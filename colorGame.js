@@ -19,6 +19,7 @@ resetButton.addEventListener("click", function() {
     for (var i=0; i < squares.length; i++) {
         squares[i].style.background = colors[i];
     }
+    h1.style.background = "#232323";
 });
 
 
@@ -39,6 +40,7 @@ for( var i = 0; i < squares.length; i++) {
            messageDisplay.textContent = "Correct";
            changeColors(clickedColor);
             h1.style.background = clickedColor;
+            resetButton.textContent = "Play again?";
         } else {
             this.style.background = "#232323";
             //alert("Wrong");
