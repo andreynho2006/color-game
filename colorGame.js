@@ -30,6 +30,8 @@ for( var i = 0; i < squares.length; i++) {
         //compare color to picked color
         if(clickedColor === pickedColor) {
            // alert("Corect");
+           messageDisplay.textContent = "Correct";
+           changeColors(clickedColor);
         } else {
             this.style.background = "#232323";
             //alert("Wrong");
@@ -38,3 +40,10 @@ for( var i = 0; i < squares.length; i++) {
     });
 }
 
+function changeColors(color) {
+    //loop through all squares
+    for(var i = 0; i < squares.length; i++) {
+        //change each color to mtch given color
+        squares[i].style.background = color;
+    }  
+}
