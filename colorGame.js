@@ -54,10 +54,13 @@ resetButton.addEventListener("click", function() {
     pickedColor = pickColor();
     //chage the colors of the squares from the page
     colorDisplay.textContent = pickedColor;
+    this.textContent = "New Colors";
+
     for (var i=0; i < squares.length; i++) {
         squares[i].style.background = colors[i];
     }
-    h1.style.background = "#232323";
+    h1.style.background = "steelblue";
+    messageDisplay.textContent = "";
 });
 
 
@@ -75,10 +78,11 @@ for( var i = 0; i < squares.length; i++) {
         //compare color to picked color
         if(clickedColor === pickedColor) {
            // alert("Corect");
-           messageDisplay.textContent = "Correct";
-           changeColors(clickedColor);
-            h1.style.background = clickedColor;
+            messageDisplay.textContent = "Correct";
             resetButton.textContent = "Play again?";
+            changeColors(clickedColor);
+            h1.style.background = clickedColor;
+            
         } else {
             this.style.background = "#232323";
             //alert("Wrong");
